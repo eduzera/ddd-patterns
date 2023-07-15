@@ -43,7 +43,7 @@ export default class Customer {
   }
 
   activate() {
-    if(this.Address === undefined) {
+    if(this._address === undefined) {
       throw new Error('Address is required');
     }
     this._active = true;
@@ -51,5 +51,9 @@ export default class Customer {
 
   deactivate() {
     this._active = false;
+  }
+
+  isActive(): boolean {
+    return this._active;
   }
 }
