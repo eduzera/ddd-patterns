@@ -29,7 +29,7 @@ export default class Customer {
     return this._name;
   }
 
-  get address(): Address {
+  get Address(): Address {
     return this._address;
   }
 
@@ -38,12 +38,12 @@ export default class Customer {
     this.validate();
   }
 
-  set address(address: Address) {
+  set Address(address: Address) {
     this._address = address;
   }
 
   activate() {
-    if(this.address === undefined) {
+    if(this.Address === undefined) {
       throw new Error('Address is required');
     }
     this._active = true;
@@ -51,9 +51,5 @@ export default class Customer {
 
   deactivate() {
     this._active = false;
-  }
-
-  set Address(address: Address) {
-    this._address = address;
   }
 }
