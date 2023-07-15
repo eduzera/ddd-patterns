@@ -11,6 +11,6 @@
   },
   "scripts": {
     "tsc": "tsc",
-    "test": "jest"
+    "test": "npm run tsc --noEmit && jest"
   }
 }
