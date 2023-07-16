@@ -24,7 +24,7 @@ describe('Customer', () => {
 
   it('should activate', () => {
     const customer = new Customer('123', 'Edu Zaghi');
-    const address = new Address('Rua Visconde de Cairu', '134', '03110-040', 'São Paulo');
+    const address = new Address('Rua Visconde de Cairu', 134, '03110-040', 'São Paulo');
     customer.Address = address;
 
     customer.activate();
@@ -49,12 +49,12 @@ describe('Customer', () => {
 
   it('should add reward points', () => {
     const customer = new Customer('123', 'Edu Zaghi');
-    expect(customer.rewardsPoints).toBe(0)
+    expect(customer.rewardPoints).toBe(0)
 
-    customer.addRewardsPoints(10);
-    expect(customer.rewardsPoints).toBe(10);
+    customer.addRewardPoints(10);
+    expect(customer.rewardPoints).toBe(10);
 
-    customer.addRewardsPoints(10);
-    expect(customer.rewardsPoints).toBe(20);
+    customer.addRewardPoints(10);
+    expect(customer.rewardPoints).toBe(20);
   })
 })
