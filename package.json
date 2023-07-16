@@ -12,5 +12,9 @@
   "scripts": {
     "tsc": "tsc",
     "test": "npm run tsc --noEmit && jest"
+  },
+  "dependencies": {
+    "@types/uuid": "^9.0.2",
+    "uuid": "^9.0.0"
   }
 }
