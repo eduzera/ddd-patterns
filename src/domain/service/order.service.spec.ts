@@ -10,7 +10,7 @@ describe("Order Service", () => {
 
     const order = OrderService.placeOrder(customer, [item1]);
 
-    expect(customer.rewardsPoints).toBe(5);
+    expect(customer.rewardPoints).toBe(5);
   })
 
   it("should get total of all orders", () => {
