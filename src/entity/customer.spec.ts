@@ -46,4 +46,15 @@ describe('Customer', () => {
       customer.activate()
     }).toThrow('Address is required');
   })
+
+  it('should add reward points', () => {
+    const customer = new Customer('123', 'Edu Zaghi');
+    expect(customer.rewardsPoints).toBe(0)
+
+    customer.addRewardsPoints(10);
+    expect(customer.rewardsPoints).toBe(10);
+
+    customer.addRewardsPoints(10);
+    expect(customer.rewardsPoints).toBe(20);
+  })
 })
