@@ -1,7 +1,9 @@
-export default class Product {
-  private _id;
-  private _name;
-  private _price;
+import ProductInterface from "./product.interface";
+
+export default class Product implements ProductInterface {
+  protected _id;
+  protected _name;
+  protected _price;
 
   constructor(id: string, name: string, price: number) {
     this._id = id;
