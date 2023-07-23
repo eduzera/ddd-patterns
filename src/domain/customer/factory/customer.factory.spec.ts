@@ -1,3 +1,4 @@
+import Address from "../entity/value-object/address";
 import CustomerFactory from "./customer.factory";
 
 describe("CustomerFactory", () => {
@@ -11,12 +12,7 @@ describe("CustomerFactory", () => {
   })
 
   it("should create a customer with address", () => {
-    const address = {
-      street: "Rua ABC",
-      number: 123,
-      zipcode: "12345-678",
-      city: "São Paulo",
-    }
+    const address = new Address("Rua ABC", 123, "12345-678", "São Paulo");
     const customer = CustomerFactory.createWithAddress("Eduardo", address)
 
     expect(customer.id).toBeDefined();

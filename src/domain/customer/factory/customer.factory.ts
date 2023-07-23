@@ -1,3 +1,4 @@
+import Address from "../entity/value-object/address";
 import Customer from "../entity/customer";
 import { v4 as uuid } from "uuid";
 
